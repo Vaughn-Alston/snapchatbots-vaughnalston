@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 const renderSong = ({ item, index }) => (
   <Song
     index={index}
-    imageUrl={item.imageUrl}
+    imageUrl={"https://www.google.com/imgres?q=mr%20baldi%20basics&imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaVWOcEptfO8%2Fhq720.jpg%3Fsqp%3D-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD%26rs%3DAOn4CLCjOZAa7RlVuHhPXreSXrelKG7rew&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DaVWOcEptfO8&docid=l3Bs796qqyOPFM&tbnid=lVzlhkc0K9IdPM&vet=12ahUKEwjNvaC9idOVAxUaEkQIHUd7PA0QnPAOegUIoQEQAA..i&w=686&h=386&hcb=2&ved=2ahUKEwjNvaC9idOVAxUaEkQIHUd7PA0QnPAOegUIoQEQAA"}
     songTitle={item.songTitle}
     songArtists={item.songArtists}
     albumName={item.albumName}

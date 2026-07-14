@@ -5,6 +5,9 @@ import BasicChatbot from "../components/BasicChatbot";
 import AlexisChatbot from "../components/AlexisChatbot";
 import VaughnChatbot from "../components/VaughnChatbot";
 import ShawnsChatBot from "../components/ShawnsChatBot";
+import KritikaGame from "../components/KritikaGameBot";
+
+//unhinged but hinge triva
 
 // prettier-ignore
 export const CHATBOTS = {
@@ -28,13 +31,23 @@ export const CHATBOTS = {
       component: VaughnChatbot,
 },
 
-    "ShawnsChatBot" : {
-      id: "ShawnChatBot",
+    "KritikaGameBot" : {
+      id: "KritikaGameBot",
+      name: "Unhinged but Hinged Triva",
+      imageUrl: "/Users/valston/Desktop/SEA - Project/ShowCase_2/snapchatbots-vaughnalston/assets/images/images.jpeg",
+      component: KritikaGame,
+},
+
+
+// Kritikas Chatbot
+
+
+    "ShawnsChatBot": {
+      id: "ShawnsChatBot",
       name: "Shawn Chat Bot",
-      imageUrl: "https://loremflickr.com/140/140",
+      imageUrl: "/Users/valston/Desktop/SEA - Project/ShowCase_2/snapchatbots-vaughnalston/assets/images/MONEKY.jpeg",
       component: ShawnsChatBot,
 }
-
 
 
 
