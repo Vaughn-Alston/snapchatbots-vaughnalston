@@ -37,7 +37,7 @@ let QuestionArray = [
 const CHATBOT_USER_OBJ = {
   _id: 2,
   name: "React Native Chatbot",
-  avatar: "https://loremflickr.com/140/140",
+  avatar: "/assets/images/mrbaldy.jpg",
 };
 
 export default function App() {
