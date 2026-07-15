@@ -31,13 +31,10 @@ let QuestionArray = [
 
 
 
-
-
-
 const CHATBOT_USER_OBJ = {
   _id: 2,
   name: "React Native Chatbot",
-  avatar: "/assets/images/mrbaldy.jpg",
+  avatar: "https://loremflickr.com/140/140",
 };
 
 export default function App() {
@@ -49,8 +46,6 @@ export default function App() {
 
   //This will help me restart if the story is false then don't start if it is true begin
   const [begin, setStory] = useState(false);
-
-
 
 
 
@@ -92,7 +87,8 @@ export default function App() {
 
 
   const respondToUser = (userMessages) => {
-    // console.log("Recent user msg:", userMessages[user_msg_count].text);
+
+
 
 // If the game hasnt started
   if(!begin) 
@@ -110,18 +106,7 @@ export default function App() {
 
       }
   }
-   else {
-
-   
-
-    CheckAnswer(userMessages);
-    addBotMessage(count + "/ 4 Correct!");
-    addBotMessage(QuestionArray[count].question);
-
-
-
-
-   }
+  
 
 };
 
@@ -159,17 +144,6 @@ const CheckAnswer = (userMessages) => {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
   const onSend = useCallback((messages = []) => {

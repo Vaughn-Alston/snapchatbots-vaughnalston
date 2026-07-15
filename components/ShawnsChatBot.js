@@ -7,7 +7,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 const CHATBOT_USER_OBJ = {
   _id: 3,
   name: "Shawn Chat Bot",
-  avatar: "https://loremflickr.com/140/140",
+  avatar: "/Users/valston/Desktop/SEA - Project/ShowCase_2/snapchatbots-vaughnalston/assets/images/MONEKY.jpeg",
 };
 
 const game_db = [

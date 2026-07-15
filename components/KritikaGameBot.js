@@ -5,7 +5,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 const CHATBOT_USER_OBJ = {
   _id: 2,
   name: "MEOWT",
-  avatar: "https://loremflickr.com/140/140",
+  avatar:"/Users/valston/Desktop/SEA - Project/ShowCase_2/snapchatbots-vaughnalston/assets/images/images.jpeg",
 };
 
 const TRIVIA_DATA = [
@@ -35,7 +35,7 @@ const TRIVIA_DATA = [
 
 const WRONG_MEMES = [
   "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Zic3BtcXJud3F3cWp2Mms4N3Z6ZHp0ZTR5MTl3Ym95am0wa2lhMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hPPx8yk3Bmqys/giphy.gif", // "Wrong" buzzer
-  "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTN0Nm96MzN6djg5dWp5cmZreW1mOHFmdm0zNmJmZHFrbzV0Z3V6ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AsTEoZ9O9VstgS4/giphy.gif", // Steve Harvey shock
+  "https://me dia.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTN0Nm96MzN6djg5dWp5cmZreW1mOHFmdm0zNmJmZHFrbzV0Z3V6ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AsTEoZ9O9VstgS4/giphy.gif", // Steve Harvey shock
   "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzh0bnd5MmIwbHBiN3FmOHIwbmdscWl2dmZnaTBtMWg1a2FndnYwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R51a8oAH7KwbS/giphy.gif", // Forrest Gump "Stupid is as stupid does"
   "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnd6bW85MG82c2tvd3Uzdzc1Y29nNjNxa3Q3YzJ0YnhiZTh2dTBoZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d2W7eH7uvEZ3bxVS/giphy.gif", // Disappointed look
   "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHh1b2h0dHlsdmQyb3R3MHVpcnl1ZThpbnB1cG9rcmVsbndidXoxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/14aUO0QHPNygU0/giphy.gif"  // "No" office meme
