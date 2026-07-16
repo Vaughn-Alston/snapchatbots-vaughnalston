@@ -11,7 +11,7 @@ const prompt = [
   {
     role: "system",
     content:
-    "What is my name"
+    "How close is earth to the suns"
   },
 ];
 
@@ -52,6 +52,7 @@ const CHATBOT_USER_OBJ = {
 
 export default function BasicChatbot() {
   const [messages, setMessages] = useState([]);
+  const [chatHistory, setChatHistory] = useState(prompt);
 
   useEffect(() => {
     setMessages([
@@ -97,14 +98,43 @@ const respondToUser = async (userMessages) => {
     console.log("User message text:", userMessages[0].text);
 
     // build your conversation array
+  const complete = [
+  ...chatHistory,
+  {
+    role: "user",
+    content: userMessages[0].text,
+  },
+];
+
 
     // call getChat()
+    const response = await getChat(complete);
+
+if (response.error) {
+  console.log(response.error);
+  return;
+}
 
     // get the response
 
+    const botReply = response.choices[0].message.content;
+
+
+
+
     // update chat history
+     setChatHistory([
+      ...complete,
+      {
+        role: "assistant",
+        content: botReply,
+      },
+    ]);
+
+
 
     // display the bot response
+        addBotMessage(botReply);
 
 };
 
