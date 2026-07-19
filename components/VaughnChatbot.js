@@ -3,6 +3,7 @@ import { GiftedChat } from "react-native-gifted-chat";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
+//Here is the questions that will be displayed to the user
 let QuestionArray = [
 {
     "question" : "What is 2 + 2?",
@@ -31,33 +32,41 @@ let QuestionArray = [
 
 
 
+
 const CHATBOT_USER_OBJ = {
   _id: 2,
   name: "React Native Chatbot",
   avatar: "https://loremflickr.com/140/140",
 };
 
+
+
+
 export default function App() {
-  // Here we hae a state variable that will track the users response
-  const [messages, setMessages] = useState([]);
+
+// Here we hae a state variable that will track the users response
+const [messages, setMessages] = useState([]);
 
 
 
 
-  //This will help me restart if the story is false then don't start if it is true begin
-  const [begin, setStory] = useState(false);
+//This will help me restart if the story is false then don't start if it is true begin
+const [begin, setStory] = useState(false);
 
-
+const data = "Fire";
 
   useEffect(() => {
     if (messages.length < 1) {
       // Add a "starting message" when chat UI first loads
       addBotMessage(
         "Say Yes to start",
+  
       );
     }
 
   }, []);
+
+
 
   const addNewMessage = (newMessages) => {
     setMessages((previousMessages) => {
@@ -86,10 +95,13 @@ export default function App() {
 
 
 
+
+
+
+
+
+
   const respondToUser = (userMessages) => {
-
-
-
 // If the game hasnt started
   if(!begin) 
   {
@@ -98,7 +110,7 @@ export default function App() {
       if(userMessages[count].text.toLowerCase() === 'yes')
       {
         setStory(true);
-        GameStart();
+        gameStart(userMessages);
       }
       else {
 
@@ -111,39 +123,109 @@ export default function App() {
 };
 
 
-// for each point increment
 
-// Hold the answer
 const [answer, setAnswer] = useState(0);
 
 
 
 
+// User says Yes
+//     ↓
+// GameStart()
+//     ↓
+// Ask question 0
+//     ↓
+// Wait for user input
+//     ↓
+// checkAnswer()
+//     ↓
+// Correct or incorrect
+//     ↓
+// Increase count
+//     ↓
+// Ask next question
+//     ↓
+// Wait again
+//     ↓
+// Repeat until count reaches array length
+//     ↓
+// Show final score
+
+
+
+
+
 // Intro for the game
-const GameStart = () => {
-  addBotMessage("Welcome we will begin");
-  addBotMessage(QuestionArray[count].question);
+const gameStart = (userMessages) => {
+
+    //this will reflect the score of the user start at 0 
+   setCount(0);
+   //clear the chat for game for better chat visibility
+   setMessages([]);
+
+
+
+
+
+   
+setTimeout(() => {
+    //    This question appears after 2 seconds.
+ addBotMessage(QuestionArray[i].question);
+
+}, 2000);
+
+
+let i = 0;
+
+
+
+if(userMessages[0] === QuestionArray[i].answer)
+{
+setMessages([]);
+addBotMessage("Correct!");
+
+
+}
+
+
+
+
+
+
+
 };
 
 
-const CheckAnswer = (userMessages) => {
 
-  const userAnswer = userMessages[0].text;
 
-  if(userAnswer == QuestionArray[count].answer)
-  {
-      addBotMessage("Correct");
 
-      setCount(count + 1);
+
+
+
+
+
+
+
+
+
+// const CheckAnswer = (userMessages) => {
+
+//   const userAnswer = userMessages[0].text;
+
+//   if(userAnswer == QuestionArray[count].answer)
+//   {
+//       addBotMessage("Correct");
+
+//       setCount(count + 1);
   
-  } 
-  else {
+//   } 
+//   else {
 
-    addBotMessage("Try Again");
+//     addBotMessage("Try Again");
 
-  }
+//   }
 
-}
+// }
 
 
   const onSend = useCallback((messages = []) => {

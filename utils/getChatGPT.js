@@ -1,5 +1,8 @@
 const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
+
+
+
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Accept", "application/json");
@@ -19,7 +22,6 @@ export const getChat = async (messages) => {
   });
 
 
-
   const requestOptions = {
     method: "POST",
     headers: myHeaders,
@@ -31,6 +33,8 @@ export const getChat = async (messages) => {
     "https://api.openai.com/v1/chat/completions",
     requestOptions,
   );
+
+  console.log(apiKey);
 
   return await response.json();
 };
